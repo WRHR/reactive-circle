@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 export default class SizeSettings extends Component{
+    
     render(){
         return(
             <>

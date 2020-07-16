@@ -16,15 +16,15 @@ class App extends Component {
     circleFill:'white'
   }
 
-  setCircleFill = color => {
+  setCircleFill = () => {
     
   }
 
-  setRadius= event =>{
+  setRadius= () =>{
    
   }
 
-  setStrokeWidth= number =>{
+  setStrokeWidth= () =>{
 
   }
   
