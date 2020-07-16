@@ -2,14 +2,16 @@ import React from 'react'
 
 export default function Circle(props){
     return(
-        <svg width={props.circleX * 2} height={props.circleY *2}>
+        <svg 
+            width={(props.circle.radius + props.circle.strokeWidth) * 2} 
+            height={(props.circle.radius + props.circle.strokeWidth) * 2}>
             <circle 
-                cx={props.circleX} 
-                cy={props.circleY} 
-                r={props.radius} 
-                stroke={props.stroke}
-                strokeWidth={props.strokeWidth}
-                fill={props.circleFill}
+                cx={props.circle.radius + props.circle.strokeWidth} 
+                cy={props.circle.radius + props.circle.strokeWidth} 
+                r={props.circle.radius} 
+                stroke={props.circle.stroke}
+                strokeWidth={props.circle.strokeWidth}
+                fill={props.circle.circleFill}
             />
         </svg>
     )

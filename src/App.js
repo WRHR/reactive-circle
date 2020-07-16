@@ -8,12 +8,17 @@ import SizeSettings from './Components/SizeSettings'
 class App extends Component {
 
   state= {
-    circleX:50,
-    circleY:50,
-    radius:20,
-    stroke:'black',
-    strokeWidth:5,
-    circleFill:'white'
+    circle:{
+      radius:20,
+      stroke:'black',
+      strokeWidth:5,
+      circleFill:'white'
+    },
+    buttons:{
+      button1: 'Red',
+      button2: 'Blue',
+      button3: 'Green',
+    }
   }
 
   setCircleFill = () => {
@@ -33,19 +38,18 @@ class App extends Component {
       <div className="App">
         <h2>Change this circle's properties:</h2>
         <Circle 
-          circleX={this.state.circleX}
-          circleY={this.state.circleY}
-          radius={this.state.radius}
-          stroke={this.state.stroke}
-          strokeWidth={this.state.strokeWidth}
-          circleFill={this.state.circleFill}
+          // radius={this.state.circle.radius}
+          // stroke={this.state.circle.stroke}
+          // strokeWidth={this.state.circle.strokeWidth}
+          // circleFill={this.state.circle.circleFill}
+          circle={this.state.circle}
         />
         <div className='properties'>
           <ColorPicker 
             // Props go here
           />
           <SizeSettings
-            // pass someprops
+            // pass some props
           />
           <StrokeSettings 
             // even more props
