@@ -12,26 +12,32 @@ class App extends Component {
     circleY:50,
     radius:20,
     stroke:'black',
-    strokeWidth:5,
+    strokeWidth:7,
     circleFill:'white'
   }
 
-  setCircleFill = color => {
-    
+  setRadius= event =>{
+    this.setState({
+      radius: event.target.value
+    })
   }
 
-  setRadius= event =>{
-   
+  setCircleFill = color => {
+    this.setState({
+      circleFill: color
+    })
   }
 
   setStrokeWidth= number =>{
-
+    this.setState({
+      strokeWidth: number
+    })
   }
   
   render(){
     return (
       <div className="App">
-        <h2>Change this circle's properties:</h2>
+        <h2>This app changes the circle's properties!</h2>
         <Circle 
           circleX={this.state.circleX}
           circleY={this.state.circleY}
@@ -41,15 +47,17 @@ class App extends Component {
           circleFill={this.state.circleFill}
         />
         <div className='properties'>
-          <ColorPicker 
-            // Props go here
-          />
-          <SizeSettings
-            // pass someprops
-          />
-          <StrokeSettings 
-            // even more props
-          />
+        <SizeSettings
+          radius={this.state.radius}
+          setRadius={this.setRadius}
+        />
+        <ColorPicker 
+          setCircleFill={this.setCircleFill}
+        />
+        <StrokeSettings 
+          setStrokeWidth={this.setStrokeWidth}
+          strokeWidth={this.state.strokeWidth}
+        />
         </div>
       </div>
     );
