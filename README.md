@@ -24,7 +24,7 @@ You really don't need to touch this...
 
 ### ColorPicker
 
-This component render the color buttons.
+This component should render the color buttons.
 Pass some props (I'd recommend the setCircleFill method...)
 On the click of a button, get a color value and set the fill color of the circle.
 
