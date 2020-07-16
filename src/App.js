@@ -6,8 +6,8 @@ import StrokeSettings from './Components/StrokeSettings'
 import SizeSettings from './Components/SizeSettings'
 
 function App() {
-  const [circleX, setCircleX] = useState(50)
-  const [circleY, setCircleY] = useState(50)
+  const [circleX] = useState(50)
+  const [circleY] = useState(50)
   const [radius, setRadius] = useState(40)
   const [stroke] = useState('black')
   const [strokeWidth, setStrokeWidth] = useState(7)
@@ -24,16 +24,12 @@ function App() {
         strokeWidth={strokeWidth}
         circleFill={circleFill}
       />
-      <SizeSettings 
-        circleX={circleX}
-        circleY={circleY}
-        radius={radius}
-        setCircleX={setCircleX}
-        setCircleY={setCircleY}
-        setRadius={setRadius}
-      />
       <ColorPicker 
         setCircleFill={setCircleFill}
+      />
+      <SizeSettings 
+        radius={radius}
+        setRadius={setRadius}
       />
       <StrokeSettings 
         setStrokeWidth={setStrokeWidth}
