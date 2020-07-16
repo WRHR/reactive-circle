@@ -14,11 +14,7 @@ class App extends Component {
       strokeWidth:5,
       circleFill:'white'
     },
-    buttons:{
-      button1: 'Red',
-      button2: 'Blue',
-      button3: 'Green',
-    }
+    buttons:['Red', 'Blue', 'Green']
   }
 
   setCircleFill = () => {
