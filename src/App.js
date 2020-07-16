@@ -38,10 +38,6 @@ class App extends Component {
       <div className="App">
         <h2>Change this circle's properties:</h2>
         <Circle 
-          // radius={this.state.circle.radius}
-          // stroke={this.state.circle.stroke}
-          // strokeWidth={this.state.circle.strokeWidth}
-          // circleFill={this.state.circle.circleFill}
           circle={this.state.circle}
         />
         <div className='properties'>
