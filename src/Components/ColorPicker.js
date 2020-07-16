@@ -1,25 +1,29 @@
 import React, {Component} from 'react'
 
 export default class ColorPicker extends Component{
-    turnRed = () => {
-        this.props.setCircleFill('red')
+    pickColor = event => {
+        this.props.setCircleFill(event.target.innerText)
     }
 
-    turnBlue = () => {
-        this.props.setCircleFill('blue')
-    }
+    // turnRed = () => {
+    //     this.props.setCircleFill('red')
+    // }
 
-    turnGreen = () => {
-        this.props.setCircleFill('green')
-    }
+    // turnBlue = () => {
+    //     this.props.setCircleFill('blue')
+    // }
+
+    // turnGreen = () => {
+    //     this.props.setCircleFill('green')
+    // }
 
     render(){
         return(
             <>
                 <h4>Change the circle's color:</h4>
-                <button onClick={this.turnRed}>Red</button>
-                <button onClick={this.turnBlue}>Blue</button>
-                <button onClick={this.turnGreen}>Green</button>
+                <button onClick={this.pickColor}>Red</button>
+                <button onClick={this.pickColor}>Blue</button>
+                <button onClick={this.pickColor}>Green</button>
             </>
         )
     }
