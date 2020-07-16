@@ -1,25 +1,43 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-export default class ColorPicker extends Component{
-    turnRed = () => {
-
+export default function SizeSettings(props){
+    function changeCX(event){
+        props.setCircleX(event.target.value)
+        // props.setCircleX(value)
     }
 
-    turnBlue = () => {
-
+    function changeCY(event){
+        props.setCircleY(event.target.value)
     }
 
-    turnGreen = () => {
+    function changeRadius(event){
+        props.setRadius(event.target.value)
     }
 
-    render(){
-        return(
-            <>
-                <h4>Change the circle's color:</h4>
-                <button >Red</button>
-                <button >Blue</button>
-                <button >Green</button>
-            </>
-        )
-    }
+    return(
+        <>
+            <h4>Change cicle's size here:</h4>
+            <input 
+                onChange={changeCX}
+                type='number' 
+                name='circleX'
+                value={props.circleX}
+                >
+            </input>
+            <input 
+                onChange={changeCY}
+                type='number' 
+                name='circleY'
+                value={props.circleY}
+                >
+            </input>
+            <input 
+                onChange={changeRadius}
+                type='number' 
+                name='radius'
+                value={props.radius}
+                >
+            </input>
+        </>
+    )
 }

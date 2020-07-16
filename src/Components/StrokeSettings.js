@@ -1,21 +1,18 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-export default class StrokeSettings extends Component{
-    // you got this
-    addStroke = () => {
-        
+export default function StrokeSettings(props){
+    function addStroke(){
+        props.setStrokeWidth(props.strokeWidth + 1)
     }
-    subStroke = () => {
-        
+    function subStroke(){
+        props.setStrokeWidth(props.strokeWidth - 1)
     }
 
-    render(){
-        return(
-            <>
-            <h4>Change the stroke width:</h4>
-            <button >+</button>
-            <button >-</button>
-            </>
-        )
-    }
+    return(
+        <>
+        <h4>Change the stroke width here:</h4>
+        <button onClick={addStroke}>+</button>
+        <button onClick={subStroke}>-</button>
+        </>
+    )
 }
